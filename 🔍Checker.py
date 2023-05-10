@@ -125,7 +125,7 @@ if selection == "Token ID":
         voted = contract_instance1.functions.voted(tokenid).call()
 
         # Voted Current Epoch
-        votedcurrentepoch = contract_instance2.functions.lastVoted(tokenid).call() > currentepoch
+#         votedcurrentepoch = contract_instance2.functions.lastVoted(tokenid).call() > currentepoch
 
         # creating a single-element container
         placeholder = st.empty()
@@ -139,7 +139,7 @@ if selection == "Token ID":
                 st.markdown("⏲️ Lock End Date: " + str(lockend))
                 st.markdown("🗳️ Vote Share: " + str(round(bal / totalSupply * 100, 4)) + "%")
                 st.markdown("✔️ Vote Reset: " + ["No" if voted == True else "Yes"][0])
-                st.markdown("⚡ Voted Current Epoch: " + ["No" if votedcurrentepoch == False else "Yes"][0])
+#                 st.markdown("⚡ Voted Current Epoch: " + ["No" if votedcurrentepoch == False else "Yes"][0])
 
         # Note
         st.markdown("#")
@@ -214,7 +214,7 @@ if selection == "Address":
                 voted = contract_instance1.functions.voted(tokenid).call()
 
                 # Voted Current Epoch
-                votedcurrentepoch = contract_instance2.functions.lastVoted(tokenid).call() > currentepoch
+#                 votedcurrentepoch = contract_instance2.functions.lastVoted(tokenid).call() > currentepoch
 
                 tokendata.append(
                     {
@@ -225,7 +225,7 @@ if selection == "Address":
                         "⏲️ Lock End Date": lockend,
                         "🗳️ Vote Share %": round(bal / totalSupply * 100, 4),
                         "✔️ Vote Reset": ["No" if voted == True else "Yes"][0],
-                        "⚡ Voted Current Epoch": ["No" if votedcurrentepoch == False else "Yes"][0],
+#                         "⚡ Voted Current Epoch": ["No" if votedcurrentepoch == False else "Yes"][0],
                     }
                 )
 
