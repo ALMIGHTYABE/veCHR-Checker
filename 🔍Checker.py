@@ -178,7 +178,7 @@ if selection == "Address":
         # Read Data
         try:
             # Checksum Address
-            wallet_address = Web3.toChecksumAddress(wallet_address)
+            wallet_address = Web3.to_checksum_address(wallet_address)
 
             # veCHR Owner
             tokenids = []
